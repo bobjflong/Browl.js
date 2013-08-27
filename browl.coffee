@@ -22,15 +22,6 @@ update_browls = () ->
         browl.setAttribute 'data-timeout', new_timeout
     
   setTimeout update_browls, browl_timeout
-      
-show_browls = () ->
-  browls = document.getElementsByClassName 'browl'
-  for browl in browls
-    if browl.className.indexOf 'shown' != -1
-      timeout_attr = browl.getAttribute 'data-timeout'
-      timeout = parseInt timeout_attr
-      if timeout > 0
-          browl.classList.add 'shown'
 
 create_browl_styles = () ->
   browl_css = """
@@ -139,7 +130,6 @@ create_browl_styles = () ->
   
 browl = () ->
   create_browl_styles()
-  show_browls()
   setTimeout update_browls, browl_timeout
   
 browl()
