@@ -15,7 +15,8 @@ update_browls = () ->
         browl.classList.add 'finished'
         setTimeout () ->
           #Collect garbage
-          browl.parentNode.removeChild(browl)
+          if browl.parentNode?
+            browl.parentNode.removeChild(browl)
         , 5000
       else
         new_timeout = timeout - 1
@@ -26,9 +27,9 @@ update_browls = () ->
 create_browl_styles = () ->
   browl_css = """
       .browl {
-        position: absolute;
+        position: fixed;
+        top:30px;
         right: 0px;
-        top:10px;
         margin: 40px;
         min-width: 200px;
         height:20px;
@@ -73,7 +74,7 @@ create_browl_styles = () ->
         
         to {
           opacity:1;
-          top:10px;
+          top:30px;
         }
       }
       
@@ -85,7 +86,7 @@ create_browl_styles = () ->
         
         to {
           opacity:1;
-          top:10px;
+          top:30px;
         }
       }
       
@@ -100,7 +101,7 @@ create_browl_styles = () ->
       @-moz-keyframes slideout {
         from {
           opacity:1;
-          top:10;
+          top:31;
         }
         
         to {
@@ -113,7 +114,7 @@ create_browl_styles = () ->
       @-webkit-keyframes slideout {
         from {
           opacity:1;
-          top:10;
+          top:31;
         }
         
         to {
