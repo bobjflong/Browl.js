@@ -1,6 +1,6 @@
 ###Browl.js - simple in browser notifications
 
-<a href="https://dl.dropboxusercontent.com/u/33989136/browl/index.html">Demo</a>
+<a target="_blank" href="https://dl.dropboxusercontent.com/u/33989136/browl/index.html">Demo</a>
 
 Browl notifications are just elements that include a `browl` class and a `data-timeout` value like:
 
