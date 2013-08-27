@@ -1,0 +1,34 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+  <title>Browl demo</title>
+  <style>
+    input[type=text] {
+      width:500px;
+      text-align: left;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <input id="text" value="Type notification here"></input>
+
+  <button id="do_browl">Browl!</button>
+  
+  <script src="browl.js"></script>
+  <script>
+    var browl_button = document.getElementById('do_browl');
+     
+    browl_button.addEventListener('click', function() {
+      var text = document.getElementById('text');
+      var elem = document.createElement('div');
+      elem.setAttribute('data-timeout', '1');
+      elem.classList.add('browl');
+      elem.innerHTML = text.value;
+      document.getElementsByTagName('body')[0].appendChild(elem);
+    }, false);
+  </script>
+</body>
+
+</html>
