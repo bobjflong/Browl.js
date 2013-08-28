@@ -28,7 +28,6 @@ create_browl_styles = () ->
   browl_css = """
       .browl {
         position: fixed;
-        top:30px;
         right: 0px;
         margin: 40px;
         min-width: 200px;
@@ -60,10 +59,14 @@ create_browl_styles = () ->
       }
       
       .browl {
-        -moz-animation-duration: 1s;
-        -webkit-animation-duration: 1s;
+        -moz-animation-duration: 0.7s;
+        -webkit-animation-duration: 0.7s;
         -moz-animation-name: slidein;
         -webkit-animation-name: slidein;
+        -moz-animation-timing-function:ease-out;
+        -webkit-animation-timing-function:ease-out;
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
       }
       
       @-moz-keyframes slidein {
@@ -96,6 +99,7 @@ create_browl_styles = () ->
         -moz-animation-name: slideout;
         -webkit-animation-name: slideout;
         opacity:0;
+        top:31px;
       }
       
       @-moz-keyframes slideout {
