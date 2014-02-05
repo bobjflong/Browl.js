@@ -16,7 +16,7 @@ All you need to do is include `browl.js` _after_ all of your markup (eg. just be
 &lt;script src="browl.js"&gt;&lt;/script&gt;
 </pre>
 
-Of course ou can also create browls dynamically (as in the demo) by writing something similar to:
+Of course you can also create browls dynamically (as in the demo) by writing something similar to:
 
 <pre>
 var elem = document.createElement('div');
